@@ -28,7 +28,7 @@
 ## :space_invader: Features
 
 - [x] Create a new project in Next.js 13
-- [ ] Install dependencies
+- [x] Install dependencies
 - [ ] [Data] Get data from Faker.js
 - [ ] [Data] Mock results with Next API
 - [ ] Create search context
