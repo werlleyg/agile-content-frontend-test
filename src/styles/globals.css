@@ -1,4 +1,28 @@
 :root {
+  /* color palette */
+  --white-color: #ffffff;
+
+  --gray-color-100: #f0f0f0;
+  --gray-color-150: #f2f2f2;
+  --gray-color-200: #dfe1e5;
+  --gray-color-700: #606367;
+  --gray-color-800: #3c4043;
+
+  --black-color: #000000;
+  --black-color-rgb: 0, 0, 0;
+  --blue-color: #3023b2;
+
+  /* setting default colors */
+  --background-color: var(var(--white-color));
+  --text-color: var(--gray-color-800);
+  --icon-color: var(var(--gray-color-700));
+  --line-border-color: var(--gray-color-200);
+  --input-text-color: var(var(--black-color));
+  --button-text-color: var(var(--black-color));
+  --skeleton-color: var(var(--gray-color-150));
+  --link-color: var(var(--blue-color));
+
+  --delay-time: 0.3s;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,6 +40,7 @@ html,
 body,
 #__next {
   min-height: 100%;
+  background-color: var(--background-color);
 }
 
 a {
