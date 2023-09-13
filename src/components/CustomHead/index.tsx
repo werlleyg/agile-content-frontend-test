@@ -1,8 +1,6 @@
 import Head from "next/head";
-
-interface ICustomHeadProps {
-  title?: string;
-}
+// types
+import { ICustomHeadProps } from "@/dtos/head";
 
 export function CustomHead({ title }: ICustomHeadProps) {
   const headData = {
