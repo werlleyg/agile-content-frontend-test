@@ -1,8 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 // util
-import { data } from "@/utils";
-import { findValueInText } from "@/utils/filters";
+import { data, findValueInText } from "@/utils";
 // types
 import { IResponseData } from "@/dtos/search";
 interface IQuery {

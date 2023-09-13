@@ -32,8 +32,8 @@
 - [x] [Data] Get data from Faker.js
 - [x] [Data] Mock results with Next API
 - [ ] [Homepage] A search input that allows you to search for animals
-- [ ] [Homepage] Header
-- [ ] [Homepage] Footer
+- [x] [Homepage] Header
+- [x] [Homepage] Footer
 - [ ] [Results page] A search input in the header
 - [ ] [Results page] Search details box
 - [ ] [Tests] Tests for use cases
