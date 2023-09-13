@@ -29,7 +29,7 @@
 
 - [x] Create a new project in Next.js 13
 - [x] Install dependencies
-- [ ] [Data] Get data from Faker.js
+- [x] [Data] Get data from Faker.js
 - [ ] [Data] Mock results with Next API
 - [ ] Create search context
 - [ ] [Homepage] A search input that allows you to search for animals
