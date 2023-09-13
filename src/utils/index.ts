@@ -1,3 +1,2 @@
-import { data } from "./data";
-
-export { data };
+export * from "./data";
+export * from "./filters";
