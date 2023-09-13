@@ -1,16 +1,13 @@
-import { ReactNode } from 'react';
+import Image from "next/image";
+// styles
+import { Container } from "./styles";
+// assets
+import GoogleLogoImage from "../../../public/assets/images/google-logo.png";
 
-import { Container } from './styles';
-
-interface HomeSearchProps {
-  children: ReactNode;
-}
-
-export function HomeSearch({ children }: HomeSearchProps) {
+export function HomeSearch() {
   return (
     <Container>
-      <h1>HomeSearch</h1>
-      {children}
+      <Image src={GoogleLogoImage} alt="Logo" />
     </Container>
   );
 }
