@@ -30,8 +30,7 @@
 - [x] Create a new project in Next.js 13
 - [x] Install dependencies
 - [x] [Data] Get data from Faker.js
-- [ ] [Data] Mock results with Next API
-- [ ] Create search context
+- [x] [Data] Mock results with Next API
 - [ ] [Homepage] A search input that allows you to search for animals
 - [ ] [Homepage] Header
 - [ ] [Homepage] Footer
