@@ -11,7 +11,7 @@ interface IQuery {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // If the method is not GET, returns
-  if (req.method !== "GET") return res.status(400).json({});
+  if (req.method !== "GET") return res.status(405).json({});
 
   const { value }: IQuery = req.query;
 
