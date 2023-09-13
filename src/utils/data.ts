@@ -10,6 +10,12 @@ const getText = () => faker.lorem.sentences();
 // @ts-ignore
 const getTitle = (type: string) => faker?.animal[type]();
 
+/**
+ * The "data" constant contains an array of objects with fake data.
+ * Each object contains information such as type, id, url, title, description, and image.
+ * It is used to simulate a dataset obtained in a query.
+ *  @type {IResponseData[]} - An array of objects of type `IResponseData`.
+ */
 export const data: IResponseData[] = [...[].constructor(100)].map(
   (_, index) => {
     const type = getType();
