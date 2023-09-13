@@ -1,11 +1,7 @@
-import { ReactNode } from "react";
-
+// styles
 import { Container } from "./styles";
-
-interface IRoundButtonProps {
-  children: ReactNode;
-  onClick?: () => void;
-}
+// types
+import { IRoundButtonProps } from "@/dtos/button";
 
 export function RoundButton(props: IRoundButtonProps) {
   const { children }: IRoundButtonProps = props;
