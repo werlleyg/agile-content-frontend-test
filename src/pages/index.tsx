@@ -3,14 +3,16 @@ import { Main } from "./styles";
 // components
 import { CustomHead } from "@/components";
 // containers
-import { Footer, Header } from "@/containers";
+import { Footer, Header, HomeSearch } from "@/containers";
 
 export default function Home() {
   return (
     <>
       <CustomHead />
       <Header />
-      <Main></Main>
+      <Main>
+        <HomeSearch />
+      </Main>
       <Footer />
     </>
   );

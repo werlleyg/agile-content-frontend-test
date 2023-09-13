@@ -1,2 +1,3 @@
-export * from "../containers/Header";
-export * from "../containers/Footer";
+export * from "./Header";
+export * from "./Footer";
+export * from "./HomeSearch";
