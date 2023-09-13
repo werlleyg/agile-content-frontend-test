@@ -2,6 +2,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 // util
 import { data } from "@/utils";
+import { findValueInText } from "@/utils/filters";
 // types
 import { IResponseData } from "@/dtos/search";
 interface IQuery {
@@ -24,8 +25,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   );
 
   res.status(200).json(response);
-}
-
-function findValueInText(value: string, text: string): boolean {
-  return text.toLowerCase().indexOf(value.toLowerCase()) !== -1;
 }
