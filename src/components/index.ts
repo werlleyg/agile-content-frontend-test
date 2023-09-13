@@ -1,3 +1,4 @@
 import { CustomHead } from "./CustomHead";
+import { RoundButton } from "./RoundButton";
 
-export { CustomHead };
+export { CustomHead, RoundButton };
