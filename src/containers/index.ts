@@ -1,3 +1,1 @@
-import { Header } from "../containers/Header";
-
-export { Header };
+export * from "../containers/Header";

@@ -1,4 +1,2 @@
-import { CustomHead } from "./CustomHead";
-import { RoundButton } from "./RoundButton";
-
-export { CustomHead, RoundButton };
+export * from "./CustomHead";
+export * from "./RoundButton";
