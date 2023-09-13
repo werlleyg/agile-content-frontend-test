@@ -9,6 +9,12 @@ interface IQuery {
   value?: string;
 }
 
+/**
+ * This function handles HTTP GET requests to fetch and filter data based on a query value.
+ * @param {NextApiRequest} req - The HTTP request object.
+ * @param {NextApiResponse} res - The HTTP response object.
+ */
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // If the method is not GET, returns
   if (req.method !== "GET") return res.status(405).json({});
@@ -24,5 +30,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       findValueInText(value, animal.type),
   );
 
+  // Return response with filtered data
   res.status(200).json(response);
 }
