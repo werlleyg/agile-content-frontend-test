@@ -11,4 +11,8 @@ export const Container = styled.button`
     box-shadow: 0px 2px 5px rgba(var(--black-color-rgb), 0.2);
     border: 1px solid var(--line-border-color);
   }
+
+  :disabled {
+    pointer-events: none;
+  }
 `;
