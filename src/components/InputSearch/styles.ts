@@ -1,9 +1,12 @@
 import styled from "@emotion/styled";
+// types
+import { IInputSearchProps } from "@/dtos/input";
+type IContainerProps = Pick<IInputSearchProps, "smallInput">;
 
-export const Container = styled.label`
+export const Container = styled.label<IContainerProps>`
   width: 100%;
   border: 1px solid var(--line-border-color);
-  padding: 0.75rem 1rem;
+  padding: ${({ smallInput }) => (smallInput ? "0.5rem 1rem" : "0.75rem 1rem")};
   border-radius: 2rem;
   display: flex;
   gap: 0.75rem;
