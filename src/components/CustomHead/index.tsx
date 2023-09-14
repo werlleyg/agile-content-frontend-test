@@ -1,11 +1,9 @@
 import Head from "next/head";
-
-interface ICustomHeadProps {
-  title?: string;
-}
+// types
+import { ICustomHeadProps, IHeadData } from "@/dtos/head";
 
 export function CustomHead({ title }: ICustomHeadProps) {
-  const headData = {
+  const headData: IHeadData = {
     title: "Agile Content",
     description: "Do your research quickly and easily",
     icon: "/favicon.ico",

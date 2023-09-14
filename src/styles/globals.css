@@ -22,7 +22,7 @@
   --input-text-color: var(var(--black-color));
   --button-text-color: var(var(--black-color));
   --skeleton-color: var(var(--gray-color-150));
-  --footer-color: var(--gray-color-150);
+  --filled-background-color: var(--gray-color-150);
   --link-color: var(var(--blue-color));
 
   --delay-time: 0.3s;
@@ -55,6 +55,10 @@ body,
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 @media (prefers-color-scheme: dark) {
