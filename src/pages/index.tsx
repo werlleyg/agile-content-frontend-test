@@ -3,7 +3,7 @@ import { Main } from "./styles";
 // components
 import { CustomHead } from "@/components";
 // containers
-import { Footer, Header, HomeSearch } from "@/containers";
+import { Footer, Header, SearchSection } from "@/containers";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <CustomHead />
       <Header />
       <Main>
-        <HomeSearch />
+        <SearchSection />
       </Main>
       <Footer />
     </>
