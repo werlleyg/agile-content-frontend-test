@@ -11,9 +11,10 @@ export function InputSearch({
   value = "",
   onChange,
   onClear,
+  smallInput,
 }: IInputSearchProps) {
   return (
-    <Container>
+    <Container smallInput={smallInput}>
       <Image src={SearchIcon} alt="search icon" id="search-icon" />
       <Input onChange={onChange} value={value} />
       {value && (

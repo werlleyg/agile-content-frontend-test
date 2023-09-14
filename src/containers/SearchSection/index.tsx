@@ -1,4 +1,11 @@
-import { useCallback, useState, FormEvent, ChangeEvent } from "react";
+import Image from "next/image";
+import {
+  useCallback,
+  useState,
+  useEffect,
+  FormEvent,
+  ChangeEvent,
+} from "react";
 import { useRouter } from "next/router";
 // styles
 import { Container, Form, ImageLogo } from "./styles";
@@ -7,7 +14,12 @@ import GoogleLogoImage from "../../../public/assets/images/google-logo.png";
 // components
 import { Button, InputSearch } from "@/components";
 
-export function HomeSearch() {
+export interface ISearchSection {
+  inlineContent?: boolean;
+  value?: string;
+}
+
+export function SearchSection({ inlineContent, value }: ISearchSection) {
   const router = useRouter();
   const [searchData, setSearchData] = useState<string>();
 
@@ -36,19 +48,29 @@ export function HomeSearch() {
     setSearchData("");
   }, []);
 
+  // Set default value in search data
+  useEffect(() => {
+    setSearchData(value);
+  }, [value]);
+
   return (
-    <Container>
-      <ImageLogo src={GoogleLogoImage} alt="Logo" />
+    <Container inlineContent={inlineContent}>
+      <ImageLogo inlineContent={inlineContent}>
+        <Image src={GoogleLogoImage} alt="Logo" />
+      </ImageLogo>
       <Form onSubmit={handleSubmit}>
         <InputSearch
           value={searchData}
           onChange={handleInputChange}
           onClear={handleClearData}
+          smallInput={!!inlineContent}
         />
 
-        <Button type="submit" name="search" disabled={!searchData}>
-          Buscar
-        </Button>
+        {!inlineContent && (
+          <Button type="submit" name="search" disabled={!searchData}>
+            Buscar
+          </Button>
+        )}
       </Form>
     </Container>
   );
