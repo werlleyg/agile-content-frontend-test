@@ -15,7 +15,7 @@ export default function Results() {
 
   // Set first access value
   const setFirstAccessValue = useCallback(() => {
-    if (search) setSearchData(search as string);
+    setSearchData(search as string);
   }, [search]);
 
   useEffect(() => {
