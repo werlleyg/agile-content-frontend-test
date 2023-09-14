@@ -24,6 +24,10 @@ export const DivOptions = styled.div`
       background: var(--gray-color-200);
     }
   }
+
+  @media screen and (max-width: 512px) {
+    display: none;
+  }
 `;
 
 export const B = styled.b`

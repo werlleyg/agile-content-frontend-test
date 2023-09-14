@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 import { ISearchSection } from ".";
 
 // types
@@ -11,6 +12,17 @@ export const Container = styled.section<ICommonProps>`
   align-items: center;
   justify-content: center;
   gap: ${({ inlineContent }) => (inlineContent ? "2rem" : "1.25rem")};
+
+  ${({ inlineContent }) =>
+    inlineContent &&
+    css`
+      @media screen and (max-width: 512px) {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+    `}
 `;
 
 export const ImageLogo = styled.div<ICommonProps>`
@@ -28,11 +40,19 @@ export const ImageLogo = styled.div<ICommonProps>`
   }
 `;
 
-export const Form = styled.form`
+export const Form = styled.form<ICommonProps>`
   display: flex;
   width: min(100% - 1.25rem, 36.375rem);
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
+
+  ${({ inlineContent }) =>
+    inlineContent &&
+    css`
+      @media screen and (max-width: 512px) {
+        width: 100%;
+      }
+    `}
 `;
