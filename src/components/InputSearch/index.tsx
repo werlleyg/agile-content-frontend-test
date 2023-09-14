@@ -5,13 +5,13 @@ import { ClearButton, Container, Input } from "./styles";
 import SearchIcon from "../../../public/assets/icons/search.svg";
 import CloseIcon from "../../../public/assets/icons/close.svg";
 // types
-import { InputSearchProps } from "@/dtos/input";
+import { IInputSearchProps } from "@/dtos/input";
 
 export function InputSearch({
   value = "",
   onChange,
   onClear,
-}: InputSearchProps) {
+}: IInputSearchProps) {
   return (
     <Container>
       <Image src={SearchIcon} alt="search icon" id="search-icon" />
