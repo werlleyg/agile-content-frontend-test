@@ -1,17 +1,31 @@
 import { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/router";
 
-import { Main } from "./styles";
+import { Deck, Main } from "./styles";
 // components
-import { CustomHead } from "@/components";
+import { Card, CustomHead } from "@/components";
 // containers
 import { Footer, ResultsHeader } from "@/containers";
+
+// types
+import { IResponseData } from "@/dtos/search";
 
 export default function Results() {
   const router = useRouter();
   const { search } = router.query;
 
   const [searchData, setSearchData] = useState<string>();
+  const [searchResult, setSearchResult] = useState<IResponseData[]>([
+    {
+      type: "crocodilia",
+      id: 48,
+      url: "https://infatuated-artichoke.info/",
+      title: "Chinese Alligator",
+      description:
+        "Praesentium repellendus neque eaque. At animi eveniet vitae cumque cumque reprehenderit. Sed reprehenderit vero quibusdam in numquam. Repudiandae natus voluptatem alias quos exercitationem reprehenderit nulla est.Praesentium repellendus neque eaque. At animi eveniet vitae cumque cumque reprehenderit. Sed reprehenderit vero quibusdam in numquam. Repudiandae natus voluptatem alias quos exercitationem reprehenderit nulla est.",
+      image: "https://loremflickr.com/644/362/animals?lock=610250119970816",
+    },
+  ]);
 
   // Set first access value
   const setFirstAccessValue = useCallback(() => {
@@ -26,7 +40,13 @@ export default function Results() {
     <>
       <CustomHead title={searchData} />
       <ResultsHeader value={searchData} />
-      <Main></Main>
+      <Main>
+        <Deck>
+          {searchResult.map((result) => (
+            <Card dataResult={result} key={result.id} />
+          ))}
+        </Deck>
+      </Main>
       <Footer />
     </>
   );
