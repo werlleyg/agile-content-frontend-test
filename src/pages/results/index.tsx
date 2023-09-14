@@ -13,11 +13,19 @@ export default function Results() {
 
   const [searchData, setSearchData] = useState<string>();
 
+  // Set first access value
+  const setFirstAccessValue = useCallback(() => {
+    if (search) setSearchData(search as string);
+  }, [search]);
+
+  useEffect(() => {
+    setFirstAccessValue();
+  }, [setFirstAccessValue]);
 
   return (
     <>
       <CustomHead />
-      {/* <Header /> */}
+      {/* <Header /> */}testes
       <Main></Main>
       <Footer />
     </>
