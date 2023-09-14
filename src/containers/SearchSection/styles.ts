@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import Image from "next/image";
 
-export const Container = styled.div`
+export const Container = styled.section`
   height: 100%;
   display: flex;
   flex-direction: column;

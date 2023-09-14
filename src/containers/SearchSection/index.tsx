@@ -7,7 +7,7 @@ import GoogleLogoImage from "../../../public/assets/images/google-logo.png";
 // components
 import { Button, InputSearch } from "@/components";
 
-export function HomeSearch() {
+export function SearchSection() {
   const router = useRouter();
   const [searchData, setSearchData] = useState<string>();
 

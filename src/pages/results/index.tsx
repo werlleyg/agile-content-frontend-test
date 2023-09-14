@@ -5,7 +5,7 @@ import { Main } from "./styles";
 // components
 import { CustomHead } from "@/components";
 // containers
-import { Footer } from "@/containers";
+import { Footer, ResultsHeader } from "@/containers";
 
 export default function Results() {
   const router = useRouter();
@@ -25,7 +25,7 @@ export default function Results() {
   return (
     <>
       <CustomHead />
-      {/* <Header /> */}testes
+      <ResultsHeader />
       <Main></Main>
       <Footer />
     </>
