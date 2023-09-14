@@ -7,7 +7,11 @@ import GoogleLogoImage from "../../../public/assets/images/google-logo.png";
 // components
 import { Button, InputSearch } from "@/components";
 
-export function SearchSection() {
+export interface ISearchSection {
+  inline?: boolean;
+}
+
+export function SearchSection({ inline }: ISearchSection) {
   const router = useRouter();
   const [searchData, setSearchData] = useState<string>();
 
@@ -37,18 +41,21 @@ export function SearchSection() {
   }, []);
 
   return (
-    <Container>
-      <ImageLogo src={GoogleLogoImage} alt="Logo" />
+    <Container inline={inline}>
+      <ImageLogo src={GoogleLogoImage} alt="Logo" inline={inline} />
       <Form onSubmit={handleSubmit}>
         <InputSearch
           value={searchData}
           onChange={handleInputChange}
           onClear={handleClearData}
+          smallInput={inline}
         />
 
-        <Button type="submit" name="search" disabled={!searchData}>
-          Buscar
-        </Button>
+        {!inline && (
+          <Button type="submit" name="search" disabled={!searchData}>
+            Buscar
+          </Button>
+        )}
       </Form>
     </Container>
   );
