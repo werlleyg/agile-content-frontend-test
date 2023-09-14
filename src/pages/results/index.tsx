@@ -1,4 +1,5 @@
-import { ReactNode } from "react";
+import { useEffect, useState, useCallback } from "react";
+import { useRouter } from "next/router";
 
 import { Main } from "./styles";
 // components
@@ -6,11 +7,13 @@ import { CustomHead } from "@/components";
 // containers
 import { Footer } from "@/containers";
 
-interface ResultsProps {
-  children: ReactNode;
-}
+export default function Results() {
+  const router = useRouter();
+  const { search } = router.query;
 
-export default function Results({ children }: ResultsProps) {
+  const [searchData, setSearchData] = useState<string>();
+
+
   return (
     <>
       <CustomHead />
