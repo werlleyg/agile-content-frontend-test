@@ -8,10 +8,14 @@ import AppsIcon from "../../../public/assets/icons/apps.svg";
 import ProfileImage from "../../../public/assets/images/profile.png";
 import { SearchSection } from "@/containers";
 
-export function ResultsHeader() {
+interface IResultsHeaderProps {
+  value?: string;
+}
+
+export function ResultsHeader({ value = "" }: IResultsHeaderProps) {
   return (
     <Container>
-      <SearchSection inline />
+      <SearchSection inlineContent value={value} />
       <DivOptions>
         <RoundButton>
           <Image src={AppsIcon} alt={"Apps Icon"} />

@@ -25,7 +25,7 @@ export default function Results() {
   return (
     <>
       <CustomHead />
-      <ResultsHeader />
+      <ResultsHeader value={searchData} />
       <Main></Main>
       <Footer />
     </>

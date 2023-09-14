@@ -1,22 +1,31 @@
 import styled from "@emotion/styled";
-import Image from "next/image";
 import { ISearchSection } from ".";
 
 // types
-type ICommonProps = Pick<ISearchSection, "inline">;
+type ICommonProps = Pick<ISearchSection, "inlineContent">;
 
 export const Container = styled.section<ICommonProps>`
   height: 100%;
   display: flex;
-  flex-direction: ${({ inline }) => (inline ? "row" : "column")};
+  flex-direction: ${({ inlineContent }) => (inlineContent ? "row" : "column")};
   align-items: center;
   justify-content: center;
-  gap: ${({ inline }) => (inline ? "2rem" : "1.25rem")};
+  gap: ${({ inlineContent }) => (inlineContent ? "2rem" : "1.25rem")};
 `;
 
-export const ImageLogo = styled(Image)<ICommonProps>`
-  width: min(100% - 1.25rem, ${({ inline }) => (inline ? "5.75rem" : "17rem")});
-  height: auto;
+export const ImageLogo = styled.div<ICommonProps>`
+  width: min(
+    100% - 1.25rem,
+    ${({ inlineContent }) => (inlineContent ? "5.75rem" : "17rem")}
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 export const Form = styled.form`
