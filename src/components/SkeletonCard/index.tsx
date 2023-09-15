@@ -1,5 +1,5 @@
 // styles
-import { Container, SkeletonBar } from "./styles";
+import { Container, Content, SkeletonBar } from "./styles";
 
 interface SkeletonCardProps {
   show: boolean;
@@ -8,13 +8,16 @@ interface SkeletonCardProps {
 
 export function SkeletonCard({ show, quantity }: SkeletonCardProps) {
   return (
-    show &&
-    [...[].constructor(quantity)].map((_, idx) => (
-      <Container key={idx}>
-        <SkeletonBar width={"30%"} />
-        <SkeletonBar width={"55%"} />
-        <SkeletonBar width={"100%"} />
+    show && (
+      <Container>
+        {[...[].constructor(quantity)].map((_, idx) => (
+          <Content key={idx}>
+            <SkeletonBar width={"30%"} />
+            <SkeletonBar width={"55%"} />
+            <SkeletonBar width={"100%"} />
+          </Content>
+        ))}
       </Container>
-    ))
+    )
   );
 }

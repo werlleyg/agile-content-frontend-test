@@ -41,6 +41,7 @@ export default function Results() {
   const showLoading = useCallback(() => {
     setLoading(true);
   }, []);
+
   // hide loading
   const hideLoading = useCallback(() => {
     setLoading(false);
@@ -89,22 +90,23 @@ export default function Results() {
       <CustomHead title={searchData} />
       <ResultsHeader value={searchData} />
       <Main>
-        <Deck>
-          {!loading &&
-            searchResult?.map((result) => (
+        {!loading && (
+          <Deck>
+            {searchResult?.map((result) => (
               <Card
                 dataResult={result}
                 key={result.id}
                 onSelected={handleSelectedShowCard}
               />
             ))}
-          <NoResultCard
-            show={(searchResult?.length === 0 || !searchData) && !loading}
-            emptyResult={searchResult?.length === 0 && !!searchData}
-            value={searchData}
-          />
-          <SkeletonCard show={loading} quantity={3} />
-        </Deck>
+            <NoResultCard
+              show={searchResult?.length === 0 || !searchData}
+              emptyResult={searchResult?.length === 0 && !!searchData}
+              value={searchData}
+            />
+          </Deck>
+        )}
+        <SkeletonCard show={loading} quantity={3} />
         <ShowCard
           show={!!selectedDataShow && !loading && searchResult?.length !== 0}
           dataShow={selectedDataShow}
