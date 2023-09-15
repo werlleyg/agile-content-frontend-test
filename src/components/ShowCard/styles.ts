@@ -19,7 +19,7 @@ export const DivBackground = styled.div`
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(var(--black-color-rgb), 0.2);
+    background-color: var(--overlay-color);
     z-index: 0;
   }
 `;

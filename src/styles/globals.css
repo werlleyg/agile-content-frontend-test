@@ -9,13 +9,16 @@
   --gray-color-200: #dfe1e5;
   --gray-color-700: #606367;
   --gray-color-800: #3c4043;
+  --gray-color-900: #202125;
 
   --black-color: #000000;
   --black-color-rgb: 0, 0, 0;
   --blue-color: #3023b2;
+  --light-blue-color: #88b0ec;
 
   /* setting default colors */
   --background-color: var(--white-color);
+  --background-input-color: var(--white-color);
   --text-color: var(--gray-color-800);
   --icon-color: var(--gray-color-700);
   --line-border-color: var(--gray-color-200);
@@ -24,12 +27,21 @@
   --skeleton-color: var(--gray-color-100);
   --filled-background-color: var(--gray-color-150);
   --link-color: var(--blue-color);
+  --overlay-color: rgba(var(--black-color-rgb), 0.2);
 
   --delay-time: 0.3s;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --background-color: var(--gray-color-900);
+    --line-border-color: var(--gray-color-700);
+    --background-input-color: var(--gray-color-800);
+    --filled-background-color: var(--gray-color-800);
+    --input-text-color: var(--white-color);
+    --text-color: var(--gray-color-200);
+    --link-color: var(--light-blue-color);
+    --overlay-color: rgba(var(--black-color-rgb), 0.6);
   }
 }
 
