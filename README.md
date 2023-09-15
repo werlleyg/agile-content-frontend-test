@@ -16,7 +16,7 @@
   </a>
 
   <a href="https://#">
-    <img alt="GitHub website up/down" src="https://img.shields.io/website-up-down-green-red/https/meusite.com.br.svg">
+    <img alt="GitHub website up/down" src="https://img.shields.io/website-up-down-green-red/https/agile-content-frontend-test.vercel.app.svg">
   </a>
 </div>
 <br/>
@@ -24,6 +24,19 @@
   Welcome! 💻✨<br/>
   Project developed with the objective of meeting the technical test for frontend developer.
 </p>
+
+<br/>
+
+## 🛠 Technologies
+
+The tools below were used in the project's development:
+
+-   [Next.js 13](https://nextjs.org/)
+-   [TypeScript](https://www.typescriptlang.org/)
+-   [@emotion](https://emotion.sh/docs/introduction)
+-   [Axios](https://axios-http.com/)
+-   [FakerJS](https://fakerjs.dev/)
+
 
 ## :space_invader: Features
 
@@ -40,6 +53,14 @@
 - [ ] [Tests] Tests for use cases
 - [x] Pipeline to publish to vercel
 
+
+## ⚙ Installation
+
+-   1. Clone and set up this repository [Mid Dev Test](https://github.com/werlleyg/agile-content-frontend-test)
+-   2. Run `npm i` or `yarn` in the project folder on your computer
+-   3. Run `npm run dev` or `yarn dev`
+-   4. Your project is already running 🔭
+       
 <br/>
 
 Developed by [Werlley Ponte](https://linkedin.com/in/werlleyg)
