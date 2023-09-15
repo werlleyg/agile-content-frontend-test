@@ -34,8 +34,8 @@
 - [x] [Homepage] A search input that allows you to search for animals
 - [x] [Homepage] Header
 - [x] [Homepage] Footer
-- [ ] [Results page] A search input in the header
-- [ ] [Results page] Results list
+- [x] [Results page] A search input in the header
+- [x] [Results page] Results list
 - [ ] [Results page] Search details box
 - [ ] [Tests] Tests for use cases
 - [ ] Pipeline to publish to vercel
