@@ -55,7 +55,7 @@ The tools below were used in the project's development:
 
 ## ⚙ Installation
 
-- 1. Clone and set up this repository [Mid Dev Test](https://github.com/werlleyg/agile-content-frontend-test)
+- 1. Clone and set up this repository [Agile Content - Frontend](https://github.com/werlleyg/agile-content-frontend-test)
 - 2. Run `npm i` or `yarn` in the project folder on your computer
 - 3. Run `npm run dev` or `yarn dev`
 - 4. Your project is already running 🔭
