@@ -5,3 +5,4 @@ export * from "./InputSearch";
 export * from "./Card";
 export * from "./NoResultCard";
 export * from "./SkeletonCard";
+export * from "./ShowCard";
