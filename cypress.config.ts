@@ -5,5 +5,8 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    env: {
+      NEXT_PUBLIC_DOMAIN: "http://localhost:3000",
+    },
   },
 });
