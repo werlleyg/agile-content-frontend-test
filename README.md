@@ -38,10 +38,10 @@
 - [x] [Results page] Results list
 - [x] [Results page] Search details box
 - [ ] [Tests] Tests for use cases
-- [ ] Pipeline to publish to vercel
+- [x] Pipeline to publish to vercel
 
 <br/>
 
-Developed with love by [Werlley Ponte](https://linkedin.com/in/werlleyg)
+Developed by [Werlley Ponte](https://linkedin.com/in/werlleyg)
 
 ---
