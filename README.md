@@ -31,12 +31,11 @@
 
 The tools below were used in the project's development:
 
--   [Next.js 13](https://nextjs.org/)
--   [TypeScript](https://www.typescriptlang.org/)
--   [@emotion](https://emotion.sh/docs/introduction)
--   [Axios](https://axios-http.com/)
--   [FakerJS](https://fakerjs.dev/)
-
+- [Next.js 13](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [@emotion](https://emotion.sh/docs/introduction)
+- [Axios](https://axios-http.com/)
+- [FakerJS](https://fakerjs.dev/)
 
 ## :space_invader: Features
 
@@ -52,15 +51,15 @@ The tools below were used in the project's development:
 - [x] [Results page] Search details box
 - [ ] [Tests] Tests for use cases
 - [x] Pipeline to publish to vercel
-
+- [x] Dark mode
 
 ## ⚙ Installation
 
--   1. Clone and set up this repository [Mid Dev Test](https://github.com/werlleyg/agile-content-frontend-test)
--   2. Run `npm i` or `yarn` in the project folder on your computer
--   3. Run `npm run dev` or `yarn dev`
--   4. Your project is already running 🔭
-       
+- 1. Clone and set up this repository [Mid Dev Test](https://github.com/werlleyg/agile-content-frontend-test)
+- 2. Run `npm i` or `yarn` in the project folder on your computer
+- 3. Run `npm run dev` or `yarn dev`
+- 4. Your project is already running 🔭
+
 <br/>
 
 Developed by [Werlley Ponte](https://linkedin.com/in/werlleyg)

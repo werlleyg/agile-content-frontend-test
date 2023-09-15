@@ -1,12 +1,19 @@
 import styled from "@emotion/styled";
 
 // types
+
 interface ISkeletonBar {
   width: string;
 }
 
 export const Container = styled.div`
   width: min(100%, 40.75rem);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
+export const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
