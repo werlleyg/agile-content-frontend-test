@@ -1,5 +1,4 @@
-import { ReactNode } from "react";
-
+// styles
 import { Container, P } from "./styles";
 
 interface NoResultCardProps {
