@@ -26,15 +26,7 @@ export default function Results() {
   const [searchResult, setSearchResult] = useState<IResponseData[]>();
   const [selectedDataShow, setSelectedDataShow] = useState<
     IResponseData | undefined
-  >({
-    type: "dog",
-    id: 16,
-    url: "https://trained-negotiation.name",
-    title: "Olde English Bulldogge",
-    description:
-      "Illo expedita voluptates eum magni fugit officia consectetur ea. Ducimus ab dolores molestias dolorem praesentium. Dolores nisi modi totam animi. Consequuntur quam blanditiis. Consectetur optio accusamus voluptates eveniet.",
-    image: "https://loremflickr.com/644/362/animals?lock=1171728908681216",
-  });
+  >();
   const [loading, setLoading] = useState<boolean>(false);
 
   // show loading
