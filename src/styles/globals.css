@@ -15,15 +15,15 @@
   --blue-color: #3023b2;
 
   /* setting default colors */
-  --background-color: var(var(--white-color));
+  --background-color: var(--white-color);
   --text-color: var(--gray-color-800);
-  --icon-color: var(var(--gray-color-700));
+  --icon-color: var(--gray-color-700);
   --line-border-color: var(--gray-color-200);
-  --input-text-color: var(var(--black-color));
-  --button-text-color: var(var(--black-color));
-  --skeleton-color: var(var(--gray-color-150));
+  --input-text-color: var(--black-color);
+  --button-text-color: var(--black-color);
+  --skeleton-color: var(--gray-color-100);
   --filled-background-color: var(--gray-color-150);
-  --link-color: var(var(--blue-color));
+  --link-color: var(--blue-color);
 
   --delay-time: 0.3s;
 }
@@ -54,7 +54,10 @@ body,
 
 a {
   color: inherit;
-  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 button {

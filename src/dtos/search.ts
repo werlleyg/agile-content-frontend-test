@@ -4,4 +4,5 @@ export interface IResponseData {
   description: string;
   type: string;
   url: string;
+  image: string;
 }

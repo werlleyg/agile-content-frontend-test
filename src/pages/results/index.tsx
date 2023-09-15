@@ -1,32 +1,78 @@
 import { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/router";
 
-import { Main } from "./styles";
+import { Deck, Main } from "./styles";
 // components
-import { CustomHead } from "@/components";
+import { Card, CustomHead, NoResultCard, SkeletonCard } from "@/components";
 // containers
 import { Footer, ResultsHeader } from "@/containers";
+
+// types
+import { IResponseData } from "@/dtos/search";
+// services
+import { getSearchResult } from "@/services/search";
 
 export default function Results() {
   const router = useRouter();
   const { search } = router.query;
 
   const [searchData, setSearchData] = useState<string>();
+  const [searchResult, setSearchResult] = useState<IResponseData[]>();
+  const [loading, setLoading] = useState<boolean>(false);
+
+  // show loading
+  const showLoading = useCallback(() => {
+    setLoading(true);
+  }, []);
+  // hide loading
+  const hideLoading = useCallback(() => {
+    setLoading(false);
+  }, []);
 
   // Set first access value
   const setFirstAccessValue = useCallback(() => {
-    if (search) setSearchData(search as string);
+    setSearchData(search as string);
   }, [search]);
+
+  // Get search response
+  const getSearchResponse = useCallback(async () => {
+    if (!searchData) return;
+    // set show loading
+    showLoading();
+    // Fetch search results based in searchData value
+    const results: IResponseData[] = await getSearchResult(searchData);
+    // Update the searchResult
+    setSearchResult(results);
+    // set hide loading
+    hideLoading();
+  }, [searchData, showLoading, hideLoading]);
 
   useEffect(() => {
     setFirstAccessValue();
   }, [setFirstAccessValue]);
 
+  useEffect(() => {
+    getSearchResponse();
+  }, [getSearchResponse]);
+
   return (
     <>
-      <CustomHead />
+      <CustomHead title={searchData} />
       <ResultsHeader value={searchData} />
-      <Main></Main>
+      <Main>
+        <Deck>
+          {!loading &&
+            searchResult?.map((result) => (
+              <Card dataResult={result} key={result.id} />
+            ))}
+          <NoResultCard
+            show={(searchResult?.length === 0 || !searchData) && !loading}
+            emptyResult={searchResult?.length === 0 && !!searchData}
+            value={searchData}
+          />
+          <SkeletonCard show={loading} quantity={3} />
+        </Deck>
+      </Main>
       <Footer />
     </>
   );

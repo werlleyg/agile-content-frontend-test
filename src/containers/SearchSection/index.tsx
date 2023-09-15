@@ -58,7 +58,7 @@ export function SearchSection({ inlineContent, value }: ISearchSection) {
       <ImageLogo inlineContent={inlineContent}>
         <Image src={GoogleLogoImage} alt="Logo" />
       </ImageLogo>
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit} inlineContent={inlineContent}>
         <InputSearch
           value={searchData}
           onChange={handleInputChange}
