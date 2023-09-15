@@ -36,7 +36,7 @@
 - [x] [Homepage] Footer
 - [x] [Results page] A search input in the header
 - [x] [Results page] Results list
-- [ ] [Results page] Search details box
+- [x] [Results page] Search details box
 - [ ] [Tests] Tests for use cases
 - [ ] Pipeline to publish to vercel
 
