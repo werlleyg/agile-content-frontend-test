@@ -5,13 +5,16 @@ import { IResponseData } from "@/dtos/search";
 
 interface ICardProps {
   dataResult: IResponseData;
+  onSelected: (e: IResponseData) => void;
 }
 
-export function Card({ dataResult }: ICardProps) {
+export function Card({ dataResult, onSelected }: ICardProps) {
   return (
     <Container>
       <CurrentLink>{dataResult.url}</CurrentLink>
-      <TitleLink>{dataResult.title}</TitleLink>
+      <TitleLink onClick={() => onSelected(dataResult)}>
+        {dataResult.title}
+      </TitleLink>
       <P>{dataResult.description}</P>
     </Container>
   );
