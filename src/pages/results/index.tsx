@@ -9,32 +9,51 @@ import { Footer, ResultsHeader } from "@/containers";
 
 // types
 import { IResponseData } from "@/dtos/search";
+// services
+import { getSearchResult } from "@/services/search";
 
 export default function Results() {
   const router = useRouter();
   const { search } = router.query;
 
   const [searchData, setSearchData] = useState<string>();
-  const [searchResult, setSearchResult] = useState<IResponseData[]>([
-    {
-      type: "crocodilia",
-      id: 48,
-      url: "https://infatuated-artichoke.info/",
-      title: "Chinese Alligator",
-      description:
-        "Praesentium repellendus neque eaque. At animi eveniet vitae cumque cumque reprehenderit. Sed reprehenderit vero quibusdam in numquam. Repudiandae natus voluptatem alias quos exercitationem reprehenderit nulla est.Praesentium repellendus neque eaque. At animi eveniet vitae cumque cumque reprehenderit. Sed reprehenderit vero quibusdam in numquam. Repudiandae natus voluptatem alias quos exercitationem reprehenderit nulla est.",
-      image: "https://loremflickr.com/644/362/animals?lock=610250119970816",
-    },
-  ]);
+  const [searchResult, setSearchResult] = useState<IResponseData[]>();
+  const [loading, setLoading] = useState<boolean>(false);
+
+  // show loading
+  const showLoading = useCallback(() => {
+    setLoading(true);
+  }, []);
+  // hide loading
+  const hideLoading = useCallback(() => {
+    setLoading(false);
+  }, []);
 
   // Set first access value
   const setFirstAccessValue = useCallback(() => {
     setSearchData(search as string);
   }, [search]);
 
+  // Get search response
+  const getSearchResponse = useCallback(async () => {
+    if (!searchData) return;
+    // set show loading
+    showLoading();
+    // Fetch search results based in searchData value
+    const results: IResponseData[] = await getSearchResult(searchData);
+    // Update the searchResult
+    setSearchResult(results);
+    // set hide loading
+    hideLoading();
+  }, [searchData, showLoading, hideLoading]);
+
   useEffect(() => {
     setFirstAccessValue();
   }, [setFirstAccessValue]);
+
+  useEffect(() => {
+    getSearchResponse();
+  }, [getSearchResponse]);
 
   return (
     <>
@@ -42,7 +61,7 @@ export default function Results() {
       <ResultsHeader value={searchData} />
       <Main>
         <Deck>
-          {searchResult.map((result) => (
+          {searchResult?.map((result) => (
             <Card dataResult={result} key={result.id} />
           ))}
         </Deck>
