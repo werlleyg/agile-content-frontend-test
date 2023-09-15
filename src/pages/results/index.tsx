@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 import { Deck, Main } from "./styles";
 // components
-import { Card, CustomHead } from "@/components";
+import { Card, CustomHead, NoResultCard } from "@/components";
 // containers
 import { Footer, ResultsHeader } from "@/containers";
 
@@ -64,6 +64,11 @@ export default function Results() {
           {searchResult?.map((result) => (
             <Card dataResult={result} key={result.id} />
           ))}
+          <NoResultCard
+            show={searchResult?.length === 0 || !searchData}
+            emptyResult={searchResult?.length === 0 && !!searchData}
+            value={searchData}
+          />
         </Deck>
       </Main>
       <Footer />
