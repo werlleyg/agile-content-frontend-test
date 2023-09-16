@@ -16,7 +16,7 @@ export function InputSearch({
   return (
     <Container smallInput={smallInput}>
       <Image src={SearchIcon} alt="search icon" id="search-icon" />
-      <Input onChange={onChange} value={value} />
+      <Input onChange={onChange} value={value} type="text" />
       {value && (
         <ClearButton type="reset" onClick={onClear}>
           <Image src={CloseIcon} alt="search icon" />
