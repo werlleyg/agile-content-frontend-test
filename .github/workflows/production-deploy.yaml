@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Check Cypress test status
         run: |
-          if [ "${{ needs.Cypress_Test.outputs.CYPRESS_STATUS }}" -eq 0 ]; then
+          if [ "${{ needs.Test.outputs.CYPRESS_STATUS }}" -eq 0 ]; then
             echo "Cypress tests passed, proceeding with build."
             exit 0
           else
