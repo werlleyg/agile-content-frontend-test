@@ -11,7 +11,7 @@ jobs:
     steps:
       uses: actions/checkout@v3
 
-    - name: Node,js settings 
+    - name: Nodejs settings 
       uses: actions/setup-node@v3
       with:
         node-version: 18.x 
