@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "set NEXT_PUBLIC_API_URL=http://localhost:3000/api&&next build",
+    "build": "cross-env NEXT_PUBLIC_API_URL=http://localhost:3000/api next build",
     "start": "next start",
     "lint": "next lint",
     "cypress:open": "cypress open",
