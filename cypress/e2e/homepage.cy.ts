@@ -14,5 +14,7 @@ describe("Homepage Form Test", () => {
     cy.get("form").submit();
     // Check if results page loads correctly
     cy.url().should("eq", `${domain}/results?search=dog`);
+    //Clear input
+    cy.get('input[type="text"]').clear();
   });
 });
