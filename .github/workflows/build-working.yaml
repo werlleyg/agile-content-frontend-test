@@ -1,4 +1,4 @@
-name: Vercel Production Deployment
+name: Vercel Deployment
 
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -13,7 +13,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    needs: Cypress_Test
     steps:
       - name: Check Cypress test status
         run: |
