@@ -33,7 +33,7 @@ jobs:
 
   Deploy-Production:
     runs-on: ubuntu-latest
-    needs: build
+    needs: Test-project
     steps:
       - name: Checkout do código
         uses: actions/checkout@v3
