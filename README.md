@@ -22,7 +22,7 @@
 <br/>
 <p align="center">
   Welcome! 💻✨<br/>
-  Project developed with the objective of meeting the technical test for frontend developer.
+  This project aims to simulate a page inspired by Google and consult fake data, in order to test the skills with clean development, own styling, tests with Cypress and CI/CD pipeline with publication in Vercel.
 </p>
 
 <br/>
