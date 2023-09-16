@@ -28,6 +28,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "cypress": "^13.2.0"
   }
 }
