@@ -5,7 +5,7 @@ on:
     branches: feat/tests_for_use_cases # to do change to "main"
 
 jobs:
-  Test project:
+  Test-project:
     runs-on: ubuntu-latest
 
     steps:
