@@ -60,6 +60,39 @@ The tools below were used in the project's development:
 - 3. Run `npm run dev` or `yarn dev`
 - 4. Your project is already running 🔭
 
+ 
+## 📦 Arquitetura e estrutura de pastas
+
+```plaintext
+├───public
+│   └───assets
+│       ├───icons
+│       └───images
+└───src
+    ├───components
+    │   ├───Button
+    │   ├───Card
+    │   ├───CustomHead
+    │   ├───InputSearch
+    │   ├───NoResultCard
+    │   ├───RoundButton
+    │   ├───ShowCard
+    │   └───SkeletonCard
+    ├───containers
+    │   ├───Footer
+    │   ├───Header
+    │   ├───ResultsHeader
+    │   └───SearchSection
+    ├───dtos
+    ├───pages
+    │   ├───api
+    │   └───results
+    ├───services
+    ├───styles
+    └───utils
+```
+
+
 <br/>
 
 Developed by [Werlley Ponte](https://linkedin.com/in/werlleyg)
