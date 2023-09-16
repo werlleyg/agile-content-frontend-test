@@ -49,7 +49,7 @@ The tools below were used in the project's development:
 - [x] [Results page] A search input in the header
 - [x] [Results page] Results list
 - [x] [Results page] Search details box
-- [ ] [Tests] Tests for use cases
+- [x] [Tests] Tests for use cases
 - [x] Pipeline to publish to vercel
 - [x] Dark mode
 
