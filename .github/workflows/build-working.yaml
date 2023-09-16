@@ -22,7 +22,6 @@ jobs:
             echo "Cypress tests failed, skipping build."
             exit 1
           fi
-      - name: Build
 
   Deploy-Production:
     runs-on: ubuntu-latest
