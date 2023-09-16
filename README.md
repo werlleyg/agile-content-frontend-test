@@ -49,7 +49,7 @@ The tools below were used in the project's development:
 - [x] [Results page] A search input in the header
 - [x] [Results page] Results list
 - [x] [Results page] Search details box
-- [ ] [Tests] Tests for use cases
+- [x] [Tests] Tests for use cases
 - [x] Pipeline to publish to vercel
 - [x] Dark mode
 
@@ -59,6 +59,39 @@ The tools below were used in the project's development:
 - 2. Run `npm i` or `yarn` in the project folder on your computer
 - 3. Run `npm run dev` or `yarn dev`
 - 4. Your project is already running 🔭
+
+ 
+## 📦 Arquitetura e estrutura de pastas
+
+```plaintext
+├───public
+│   └───assets
+│       ├───icons
+│       └───images
+└───src
+    ├───components
+    │   ├───Button
+    │   ├───Card
+    │   ├───CustomHead
+    │   ├───InputSearch
+    │   ├───NoResultCard
+    │   ├───RoundButton
+    │   ├───ShowCard
+    │   └───SkeletonCard
+    ├───containers
+    │   ├───Footer
+    │   ├───Header
+    │   ├───ResultsHeader
+    │   └───SearchSection
+    ├───dtos
+    ├───pages
+    │   ├───api
+    │   └───results
+    ├───services
+    ├───styles
+    └───utils
+```
+
 
 <br/>
 

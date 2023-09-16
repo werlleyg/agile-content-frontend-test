@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "cross-env NEXT_PUBLIC_API_URL=http://localhost:3000/api next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cypress:open": "cypress open",
+    "cy:run": "cypress run",
+    "test": "start-server-and-test start http://localhost:3000 cy:run"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -21,6 +24,11 @@
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "start-server-and-test": "^2.0.0",
     "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "cypress": "^13.2.0"
   }
 }
