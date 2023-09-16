@@ -61,7 +61,7 @@ The tools below were used in the project's development:
 - 4. Your project is already running 🔭
 
  
-## 📦 Arquitetura e estrutura de pastas
+## 📦 Folder architecture and structure
 
 ```plaintext
 ├───public
