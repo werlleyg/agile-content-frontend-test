@@ -2,29 +2,31 @@ name: Cypress Test
 
 on:
   push:
-    branches: feat/tests_for_use_cases # to do change to "main"
+    branches:
+      - feat/tests_for_use_cases # altere para "main" quando necessário
 
 jobs:
   Test-project:
     runs-on: ubuntu-latest
 
     steps:
-      uses: actions/checkout@v3
+      - name: Check code
+        uses: actions/checkout@v3
 
-    - name: Nodejs settings 
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18.x 
+      - name: NodeJS Settings
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Run project
-      run: npm run dev
+      - name: Run project
+        run: npm run dev
 
-    - name: Run Cypress test
-      env:
-        NEXT_PUBLIC_DOMAIN: ${{ secrets.NEXT_PUBLIC_DOMAIN }}
-      run: npm run cy:run
-      env:
-        TEST_STATUS: $?
+      - name: Run Cypress tests
+        env:
+          NEXT_PUBLIC_DOMAIN: ${{ secrets.NEXT_PUBLIC_DOMAIN }}
+        run: |
+          npm run cy:run
+          export TEST_STATUS=$?
