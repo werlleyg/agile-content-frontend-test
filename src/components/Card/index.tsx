@@ -10,7 +10,7 @@ interface ICardProps {
 
 export function Card({ dataResult, onSelected }: ICardProps) {
   return (
-    <Container>
+    <Container className="card">
       <CurrentLink>{dataResult.url}</CurrentLink>
       <TitleLink onClick={() => onSelected(dataResult)}>
         {dataResult.title}
