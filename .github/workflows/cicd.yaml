@@ -1,26 +1,36 @@
-name: Vercel Deployment
+name: Test and Deploy to Vercel
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
 on:
-  workflow_run:
-    workflows: ["Test"]
-    types: [completed]
+  push:
+    branches:
+      - feat/tests_for_use_cases
+
 jobs:
-  build:
+  Test-project:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Check Cypress test status
-        run: |
-          if [ "${{ needs.Cypress_Test.outputs.CYPRESS_STATUS }}" -eq 0 ]; then
-            echo "Cypress tests passed, proceeding with build."
-            exit 0
-          else
-            echo "Cypress tests failed, skipping build."
-            exit 1
-          fi
-      - name: Build
+      - name: Check code
+        uses: actions/checkout@v3
+
+      - name: NodeJS Settings
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
         run: npm run build
+
+      - name: Run Cypress tests
+        run: |
+          npm run test
+
   Deploy-Production:
     runs-on: ubuntu-latest
     needs: build
