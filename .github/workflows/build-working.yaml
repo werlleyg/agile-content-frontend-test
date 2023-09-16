@@ -7,7 +7,7 @@ on:
     workflows: ["Cypress Test"] 
     
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
 
     needs: Cypress_Test
@@ -19,12 +19,15 @@ jobs:
             echo "Cypress tests passed, proceeding with build."
             exit 0
           else
+            echo "Cypress tests failed, skipping build."
+            exit 1
+          fi
 
     - name: Build
             
   Deploy-Production:
     runs-on: ubuntu-latest
-    needs: test
+    needs: build
     steps:
       - uses: actions/checkout@v3
       - name: Install Vercel CLI
