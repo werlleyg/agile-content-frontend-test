@@ -6,7 +6,7 @@ on:
   workflow_run:
     workflows: ["Cypress Test"] 
 jobs:
-  build:
+  Build-test:
     runs-on: ubuntu-latest
 
     needs: Cypress_Test
@@ -23,7 +23,7 @@ jobs:
             
   Deploy-Production:
     runs-on: ubuntu-latest
-    needs: build
+    needs: Build-test
     steps:
       - uses: actions/checkout@v3
       - name: Install Vercel CLI
